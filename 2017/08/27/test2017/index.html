@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2017网易实习前端面试题讨论 | Adventure Park</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="欢迎来到2017网易前端开发实习题目的讨论组今天下午14到16点网易进行了18届实习的第一次笔试，自我感觉心态有点小崩咧。但是也并没有到完全不能做的地步，毕竟只是实习的笔试，也不会太过困难地，但感觉距离还是不小，好好努力吧。 一、题型总结总结了一下大概有以下笔试题型： ###选择题部分（30分）  元素出栈可能性 排序方法的优缺点 HTTP请求方法 关系型数据库种类 多线程（进程与线程共享） 计算">
+<meta name="keywords" content="栈,排序算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017网易实习前端面试题讨论">
+<meta property="og:url" content="http://www.peterchen.com/2017/08/27/test2017/index.html">
+<meta property="og:site_name" content="Adventure Park">
+<meta property="og:description" content="欢迎来到2017网易前端开发实习题目的讨论组今天下午14到16点网易进行了18届实习的第一次笔试，自我感觉心态有点小崩咧。但是也并没有到完全不能做的地步，毕竟只是实习的笔试，也不会太过困难地，但感觉距离还是不小，好好努力吧。 一、题型总结总结了一下大概有以下笔试题型： ###选择题部分（30分）  元素出栈可能性 排序方法的优缺点 HTTP请求方法 关系型数据库种类 多线程（进程与线程共享） 计算">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://img.blog.csdn.net/20170325194014089?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170325195054566?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170326093150533?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170326113912491?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170326164729681?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-09-03T01:59:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2017网易实习前端面试题讨论">
+<meta name="twitter:description" content="欢迎来到2017网易前端开发实习题目的讨论组今天下午14到16点网易进行了18届实习的第一次笔试，自我感觉心态有点小崩咧。但是也并没有到完全不能做的地步，毕竟只是实习的笔试，也不会太过困难地，但感觉距离还是不小，好好努力吧。 一、题型总结总结了一下大概有以下笔试题型： ###选择题部分（30分）  元素出栈可能性 排序方法的优缺点 HTTP请求方法 关系型数据库种类 多线程（进程与线程共享） 计算">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170325194014089?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+  
+    <link rel="alternate" href="/atom.xml" title="Adventure Park" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Adventure Park</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Stay hungry.Stay foolish.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.peterchen.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-test2017" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/27/test2017/" class="article-date">
+  <time datetime="2017-08-27T02:52:00.000Z" itemprop="datePublished">2017-08-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/笔试/">笔试</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2017网易实习前端面试题讨论
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="欢迎来到2017网易前端开发实习题目的讨论组"><a href="#欢迎来到2017网易前端开发实习题目的讨论组" class="headerlink" title="欢迎来到2017网易前端开发实习题目的讨论组"></a>欢迎来到2017网易前端开发实习题目的讨论组</h2><p>今天下午14到16点网易进行了18届实习的第一次笔试，自我感觉心态有点小崩咧。<br>但是也并没有到完全不能做的地步，毕竟只是实习的笔试，也不会太过困难地，但感觉距离还是不小，好好努力吧。</p>
+<h2 id="一、题型总结"><a href="#一、题型总结" class="headerlink" title="一、题型总结"></a><strong>一、题型总结</strong></h2><p><strong>总结了一下大概有以下笔试题型：</strong></p>
+<p>###<strong>选择题部分（30分）</strong></p>
+<ul>
+<li><strong>元素出栈可能性</strong></li>
+<li><strong>排序方法的优缺点</strong></li>
+<li><strong>HTTP请求方法</strong></li>
+<li><strong>关系型数据库种类</strong></li>
+<li><strong>多线程（进程与线程共享）</strong></li>
+<li><strong>计算机网络协议</strong></li>
+<li><strong>linux指令</strong></li>
+<li><strong>JQuery实现方法</strong></li>
+</ul>
+<p>###<strong>编程题（60分）</strong></p>
+<ul>
+<li><strong>集合</strong></li>
+<li><strong>奇怪的表达式求值</strong></li>
+<li><strong>消除重复元素</strong><br>###<strong>问答题（10分）</strong></li>
+<li><strong>JS实现Excel表格列项排序功能</strong></li>
+</ul>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="二、重回战场（选择题）"><a href="#二、重回战场（选择题）" class="headerlink" title="二、重回战场（选择题）"></a><strong>二、重回战场（选择题）</strong></h2><h3 id="1、"><a href="#1、" class="headerlink" title="1、"></a><strong>1、</strong></h3><h4 id="问题：元素1-2-3……7入栈，有多少种出栈的可能性？"><a href="#问题：元素1-2-3……7入栈，有多少种出栈的可能性？" class="headerlink" title="问题：元素1,2,3……7入栈，有多少种出栈的可能性？"></a><strong>问题：</strong>元素1,2,3……7入栈，有多少种出栈的可能性？</h4><h4 id="考点：卡特兰数，折现法"><a href="#考点：卡特兰数，折现法" class="headerlink" title="考点：卡特兰数，折现法"></a><strong>考点：</strong><a href="https://en.wikipedia.org/wiki/Catalan_number" target="_blank" rel="external">卡特兰数</a>，<a href="http://blog.sina.com.cn/s/blog_6917f47301010cno.html" target="_blank" rel="external">折现法</a></h4><h4 id="解析："><a href="#解析：" class="headerlink" title="解析："></a><strong>解析：</strong></h4><p>真的是，这种题目总是想搞些大新闻，搞一点没人听过的东西，其实很简单，其实很自然，就是…没做出来。</p>
+<p>和这个题目一共有三个类型：</p>
+<blockquote>
+<p>1、饭后，姐姐洗碗，妹妹把姐姐洗过的碗一个一个地放进碗橱摞成一摞。一共有n个不同的碗，洗前也是摞成一摞的，也许因为小妹贪玩而使碗拿进碗橱不及时，姐姐则把洗过的碗摞在旁边，问：小妹摞起的碗有多少种可能的方式？</p>
+<p>2、给定n个数，有多少种出栈序列？</p>
+<p>3、一个有n个1和n个-1组成的字串，且前k个数的和均不小于0，那这种字串的总数为多少？</p>
+</blockquote>
+<p>乍一看，一脸萌币，该洗的洗，该放的放，咋还能这么玩。<br>在查阅了资料以后整理了一下思路，特别是这两张神图，一定要看。</p>
+<hr>
+<h3 id="在-出栈入栈-的过程中，就好比一个人要从原点到达-（2n，0）这个点-入n出n"><a href="#在-出栈入栈-的过程中，就好比一个人要从原点到达-（2n，0）这个点-入n出n" class="headerlink" title="在 出栈入栈 的过程中，就好比一个人要从原点到达 （2n，0）这个点(入n出n)"></a>在 <strong>出栈入栈</strong> 的过程中，就好比一个人要从原点到达 （2n，0）这个点(入n出n)</h3><p>入栈为右上方移动单位长度(记为操作1)，出栈为向右下方移动单位长度（记为操作2）。出栈时，栈内必须要有元素，所以，曲线在x轴上方时，是合法的。</p>
+<h3 id="但是！在合法条件下完成计算并不是一件简单的事情"><a href="#但是！在合法条件下完成计算并不是一件简单的事情" class="headerlink" title="但是！在合法条件下完成计算并不是一件简单的事情"></a><strong>但是！</strong>在合法条件下完成计算并不是一件简单的事情</h3><p>我们可以尝试从<strong>反面</strong>来做：即 <strong>合法步骤 = 所有步骤 - 非法步骤</strong></p>
+<h4 id="1-gt-合法步骤可能性为C（2n，n），即在2n个操作步骤中随机选取n个入栈过程即可"><a href="#1-gt-合法步骤可能性为C（2n，n），即在2n个操作步骤中随机选取n个入栈过程即可" class="headerlink" title="1&gt;  合法步骤可能性为C（2n，n），即在2n个操作步骤中随机选取n个入栈过程即可"></a><strong>1&gt;</strong>  <strong>合法步骤</strong>可能性为<strong>C（2n，n）</strong>，即在2n个操作步骤中随机选取n个入栈过程即可</h4><p><img src="http://img.blog.csdn.net/20170325194014089?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="图源网络"></p>
+<h4 id="2-gt-接下来讨论非法步骤，是比较绕的"><a href="#2-gt-接下来讨论非法步骤，是比较绕的" class="headerlink" title="2&gt; 接下来讨论非法步骤，是比较绕的"></a><strong>2&gt;</strong> 接下来讨论<strong>非法步骤</strong>，是比较绕的</h4><p><img src="http://img.blog.csdn.net/20170325195054566?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="图源网络"></p>
+<p>我们可以看到，图示所列的实线非法步骤越过了x轴，这是当然的。<br>但是当我们以y = -1为对称轴将图像对称后（即操作1和2互换），我们可以发现，所有的非法折现都到达了（2n,-2）这个点，经过研究后发现并不是巧合，也没能看出是为什么。</p>
+<p>但是我们可以发现，对称后，非法步骤中，操作2 比 操作1多了来了两次。<br>即进行 n-1 次操作 1，n+1次操作2，即可完成非法操作。</p>
+<h4 id="所以答案为C（2n-n）-C-2n-n-1-C-2n-n-n-1"><a href="#所以答案为C（2n-n）-C-2n-n-1-C-2n-n-n-1" class="headerlink" title="所以答案为C（2n,n）-C(2n,n-1) = C(2n,n)/(n+1)"></a><strong>所以答案为C（2n,n）-C(2n,n-1) = C(2n,n)/(n+1)</strong></h4><p>当n = 7时，次数为<strong>429次</strong> （不会就蒙D…？）</p>
+<h3 id="2、"><a href="#2、" class="headerlink" title="2、"></a><strong>2、</strong></h3><h4 id="问题：在100-0000个数中选出最大的五个数字，那种排序方法最为快速？"><a href="#问题：在100-0000个数中选出最大的五个数字，那种排序方法最为快速？" class="headerlink" title="问题：在100 0000个数中选出最大的五个数字，那种排序方法最为快速？"></a><strong>问题：</strong>在100 0000个数中选出最大的五个数字，那种排序方法最为快速？</h4><h4 id="考点：-堆排序，合并排序，快速排序，希尔排序（插入排序的一种，也称缩小增量排序）"><a href="#考点：-堆排序，合并排序，快速排序，希尔排序（插入排序的一种，也称缩小增量排序）" class="headerlink" title="考点： 堆排序，合并排序，快速排序，希尔排序（插入排序的一种，也称缩小增量排序）"></a><strong>考点：</strong> 堆排序，合并排序，<a href="https://www.baidu.com/link?url=dEs0NrTPGEEYJTwto0vtvxdglg_5CmRDmTKEQzKtpoieR42bNcHU_nDQbdzZvaPOQLuC1kAFkifEAK5V5jgGIF2UevgpyFSNKHD8yORFkDi-ha8U_O_n_QyeyfuyG7RA0E89TNGCeurqkomnha_llUN7t_a65fLvM-JE5U0LW0WhIGC3luvg7D24fpjHuSROAPAHXI0CYxxoxPUXu9MnK4rYofIsydrFm2wFqhRwZAC&amp;wd=&amp;eqid=ab50fde300076ba50000000358d65dc2" target="_blank" rel="external">快速排序</a>，希尔排序（插入排序的一种，也称缩小增量排序）</h4><p>（动画的话参考这个：<a href="http://www.atool.org/sort.php）" target="_blank" rel="external">http://www.atool.org/sort.php）</a></p>
+<h4 id="解析：-1"><a href="#解析：-1" class="headerlink" title="解析："></a><strong>解析：</strong></h4><p>数据结构我真的没有好好学吗..</p>
+<blockquote>
+<p>❤<strong>快速排序：</strong>真的，100 0000的数据量以内，见到快排，就选了吧。不跟你多..<br><strong>原理：</strong>快速排序（Quicksort）是对<strong>冒泡排序</strong>的一种改进。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。<br><strong>优势：</strong>插入排序在对几乎已经排好序的数据操作时，效率高，即可以达到线性排序的效率。<br><strong>缺点：</strong>不稳定，在序列有序或者逆序的情况下最不利于发挥其长处</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>希尔排序：</strong>我怎么就觉得这个快<br><strong>原理：</strong>希尔排序(Shell Sort)是<strong>插入排序</strong>的一种。也称<strong>缩小增量排序</strong>，是直接插入排序算法的一种更高效的改进版本。希尔排序是非稳定排序算法。希尔排序是把记录按下标的一定增量分组，对每组使用直接插入排序算法排序；随着增量逐渐减少，每组包含的关键词越来越多，当增量减至1时，整个文件恰被分成一组，算法便终止。<br><strong>优势：</strong>快，数据移动少<br><strong>缺点：</strong>不稳定，d的取值是多少，应取多少个不同的值，都无法确切知道，只能凭经验来取，并且插入排序一般来说是低效的，因为插入排序每次只能将数据移动一位。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>❤<strong>堆排序：</strong>数据超过1000 0000的时候，他是老大<br><strong>原理：</strong>堆排序(Heapsort)是指利用<strong>堆积树（堆）</strong>这种数据结构所设计的一种排序算法，它是<strong>选择排序</strong>的一种。可以利用数组的特点快速定位指定索引的元素。堆分为大根堆和小根堆，是完全二叉树。<strong>大根堆</strong>的要求是<strong>每个节点的值都不大于其父节点的值</strong>，即A[PARENT[i]] &gt;= A[i]。在数组的非降序排序中，需要使用的就是大根堆，因为根据大根堆的要求可知，最大的值一定在堆顶。<br><strong>优势：</strong>由于它在直接选择排序的基础上利用了比较结果形成。效率提高很大。它完成排序的总比较次数为O(nlog2n)，它是对数据的有序性不敏感的一种算法。<br><strong>缺点：</strong>在小规模序列中使用它不合适（不要杀鸡用牛刀？）</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>归并排序：</strong>我怎么就觉得这个快<br><strong>原理：</strong>归并排序是建立在归并操作上的一种有效的排序算法,该算法是采用<strong>分治法</strong>（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为<strong>二路归并</strong>。<br><strong>优势：</strong>使用它对两个己有序的序列归并，将有无比巨大的优势。其时间复杂度无论是在最好情况下还是在最坏情况下均是O(nlog2n)，且对数据的有序性不敏感。<br><strong>缺点：</strong>需要与待排序序列一样多的辅助空间，所以数据节点数据量大，则不适合使用</p>
+</blockquote>
+<h2 id="——————————"><a href="#——————————" class="headerlink" title="——————————"></a>——————————</h2><h3 id="3、HTTP的请求方法"><a href="#3、HTTP的请求方法" class="headerlink" title="3、HTTP的请求方法"></a><strong>3、HTTP的请求方法</strong></h3><h4 id="问题：以下不属于HTTP的请求方法的是？（答案为：SET）"><a href="#问题：以下不属于HTTP的请求方法的是？（答案为：SET）" class="headerlink" title="问题：以下不属于HTTP的请求方法的是？（答案为：SET）"></a><strong>问题：</strong>以下不属于HTTP的请求方法的是？（答案为：SET）</h4><h4 id="考点：关于HTTP（Hypertext-Transfer-Protocol）的八种请求方法"><a href="#考点：关于HTTP（Hypertext-Transfer-Protocol）的八种请求方法" class="headerlink" title="考点：关于HTTP（Hypertext Transfer Protocol）的八种请求方法"></a><strong>考点：</strong>关于HTTP（Hypertext Transfer Protocol）的八种请求方法</h4><h3 id="请求方法列表"><a href="#请求方法列表" class="headerlink" title="请求方法列表"></a>请求方法列表</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>概述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>❤GET</strong></td>
+<td>请求页面的详细信息，并返回实体主体。</td>
+</tr>
+<tr>
+<td><strong>❤POST</strong></td>
+<td>向指定资源提交数据进行数据请求（例如提交表单，或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。</td>
+</tr>
+<tr>
+<td><strong>PUT</strong></td>
+<td>从客户端向服务器传送的数据取代指定的文档内容。</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>请服务器删除指定的页面。</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>类似与Get请求，只不过返回的响应中没有具体的内容，用于获取报头</td>
+</tr>
+<tr>
+<td>CONNECT</td>
+<td>HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>允许客户端查看服务器的性能。</td>
+</tr>
+<tr>
+<td>TRACE</td>
+<td>回显服务器收到的请求，主要用于测试或诊断。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="4、关系数据库的种类"><a href="#4、关系数据库的种类" class="headerlink" title="4、关系数据库的种类"></a><strong>4、关系数据库的种类</strong></h3><h4 id="问题：以下不属于关系数据库的是"><a href="#问题：以下不属于关系数据库的是" class="headerlink" title="问题：以下不属于关系数据库的是?"></a><strong>问题：</strong>以下不属于关系数据库的是?</h4><h4 id="考点：数据库基础知识"><a href="#考点：数据库基础知识" class="headerlink" title="考点：数据库基础知识"></a><strong>考点：</strong>数据库基础知识</h4><h4 id="解析：-2"><a href="#解析：-2" class="headerlink" title="解析："></a><strong>解析：</strong></h4><p>数据库类型主要可分为:网状数据库(Network Database)、关系数据库(Relational Database)、树状数据库(Hierarchical Database)、面向对象数据库(Object-oriented Database)等</p>
+<blockquote>
+<p>❤<strong>关系数据库：（SQL）</strong><br><strong>原理：</strong><br>1、关系型数据库，是指采用了关系模型来组织<br>数据的数据库；<br>2、关系型数据库的最大特点就是事务的一致性；<br>3、简单来说，关系模型指的就是二维表格模型，<br>而一个关系型数据库就是由二维表及其之间的联系所组成的一个数据组织。<br><strong>优势：</strong><br>1、容易理解：二维表结构是非常贴近逻辑世界一个概念，关系模型相对网状、层次等其他模型来说更容易理解；<br>2、使用方便：通用的SQL语言使得操作关系型数据库非常方便；<br>3、易于维护：丰富的完整性(实体完整性、参照完整性和用户定义的完整性)大大减低了数据冗余和数据不一致的概率；<br>4、支持SQL，可用于复杂的查询。<br>1、为了维护一致性所付出的巨大代价就是其读写性能比较差；<br>2、固定的表结构；<br>3、高并发读写需求；<br>4、海量数据的高效率读写；<br><strong>主流数据库代表：</strong><br>oracle、db2、sqlserver、sybase、mysql</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>非关系数据库（Not Only SQL）：</strong>（种类较多，也就不细分了）<br><strong>定义：</strong><br>1、使用键值对存储数据；<br>2、分布式；<br>3、一般不支持ACID特性；<br>4、非关系型数据库严格上不是一种数据库，应该是一种数据结构化存储方法的集合。<br><strong>优势：</strong><br>1、使用键值对存储数据；<br>2、分布式；<br>3、一般不支持ACID特性；<br>4、非关系型数据库严格上不是一种数据库，应该是一种数据结构化存储方法的集合。<br>1、不提供sql支持，学习和使用成本较高；<br>2、无事务处理，附加功能bi和报表等支持也不好；<br><strong>主流数据库代表：</strong><br>MongoDb、redis、HBase</p>
+</blockquote>
+<hr>
+<h3 id="5、多线程（进程与线程共享）"><a href="#5、多线程（进程与线程共享）" class="headerlink" title="5、多线程（进程与线程共享）"></a><strong>5、多线程（进程与线程共享）</strong></h3><h4 id="问题：以下属于同一个进程内线程共享的部分是？"><a href="#问题：以下属于同一个进程内线程共享的部分是？" class="headerlink" title="问题：以下属于同一个进程内线程共享的部分是？"></a><strong>问题：</strong>以下属于同一个进程内线程共享的部分是？</h4><h4 id="考点：多线程（我能怎么办，我也很绝望系列）中线程共享的环境"><a href="#考点：多线程（我能怎么办，我也很绝望系列）中线程共享的环境" class="headerlink" title="考点：多线程（我能怎么办，我也很绝望系列）中线程共享的环境"></a><strong>考点：</strong>多线程（我能怎么办，我也很绝望系列）中线程共享的环境</h4><h4 id="解析：-3"><a href="#解析：-3" class="headerlink" title="解析："></a><strong>解析：</strong></h4><h4 id="1-gt-线程共享的环境包括："><a href="#1-gt-线程共享的环境包括：" class="headerlink" title="1&gt;线程共享的环境包括："></a><strong>1&gt;线程共享的环境包括：</strong></h4><p><strong>1、进程代码段</strong><br><strong>2、进程的公有数据</strong>(利用这些共享的数据，易于线程间实现相互之间的通讯)<br><strong>3、进程打开的文件描述符</strong><br><strong>4、信号的处理器</strong><br><strong>5、进程的当前目录</strong><br><strong>6、进程用户ID</strong>与<strong>进程组ID</strong>。<br><strong>7、</strong>线程的<strong>堆共有，栈私有</strong></p>
+<h4 id="2-gt-线程的非共享的个性包括："><a href="#2-gt-线程的非共享的个性包括：" class="headerlink" title="2&gt;线程的非共享的个性包括："></a><strong>2&gt;线程的非共享的个性包括：</strong></h4><p><strong>1.线程ID</strong><br>      每个线程都有自己的线程ID，这个ID在本进程中是唯一的。进程用此来标识线程。<br><strong>2.寄存器组的值</strong><br>       由于线程间是并发运行的，每个线程有自己不同的运行线索，当从一个线程切换到另一个线程上时，必须将原有的线程的寄存器集合的状态保存，以便将来该线程在被重新切换到时能得以恢复。<br><strong>3.线程的栈</strong><br>       栈是保证线程独立运行所必须的。<br>       线程函数可以调用函数，而被调用函数中又是可以层层嵌套的，所以线程必须拥有自己的函数栈，使得函数调用可以正常执行，不受其他线程的影响。<br><strong>4.错误返回码</strong><br>       由于同一个进程中有很多个线程在同时运行，可能某个线程进行系统调用后设置了errno值，而在该线程还没有处理这个错误，另外一个线程就在此时被调度器投入运行，这样错误值就有可能被修改。 所以，不同的线程应该拥有自己的错误返回码变量。<br><strong>5.线程的信号屏蔽码</strong><br>       由于每个线程所感兴趣的信号不同，所以线程的信号屏蔽码应该由线程自己管理。但所有的线程都共享同样的信号处理器。<br>   <strong>6.线程的优先级</strong><br>       由于线程需要像进程那样能够被调度，那么就必须要有可供调度使用的参数，这个参数就是线程的优先级。</p>
+<hr>
+<h3 id="6、计算机网络"><a href="#6、计算机网络" class="headerlink" title="6、计算机网络"></a><strong>6、计算机网络</strong></h3><h4 id="问题：以下说法正确的是："><a href="#问题：以下说法正确的是：" class="headerlink" title="问题：以下说法正确的是："></a><strong>问题：</strong>以下说法正确的是：</h4><h4 id="考点：计算机网络"><a href="#考点：计算机网络" class="headerlink" title="考点：计算机网络"></a><strong>考点：</strong>计算机网络</h4><h4 id="解析：-4"><a href="#解析：-4" class="headerlink" title="解析："></a><strong>解析：</strong></h4><blockquote>
+<p><strong>A:</strong> UDP是可靠服务（Wrong）<br><strong>解析：</strong> UDP 是User Datagram Protocol的简称， 中文名是用户数据报协议，是OSI（Open System Interconnection，开放式系统互联） 参考模型中一种无连接的传输层协议，提供面向事务的简单<strong>不可靠</strong>信息传送服务，IETF RFC 768是UDP的正式规范。UDP在IP报文的协议号是17。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>B:</strong> NAT是一种把内部私有网络地址（IP地址）翻译成合法网络IP地址的技术（Right）<br><strong>解析：</strong> NAT（Network Address Translation，网络地址转换）是1994年提出的。当在专用网内部的一些主机本来已经分配到了本地IP地址（即仅在本专用网内使用的专用地址），但现在又想和因特网上的主机通信（并不需要加密）时，可使用NAT方法。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>C:</strong> TCP建立和关闭链接都只需要四次握手（Shake hands?先mark）（Wrong）<br><strong>解析：</strong> <strong>三次握手建立链接，四次挥手关闭连接</strong><br>所谓<strong>三次握手(Three-way Handshake)</strong>，是指建立一个TCP连接时，需要客户端和服务器总共发送3个包。三次握手的目的是<strong>连接服务器指定端口</strong>，<strong>建立TCP连接</strong>,并<strong>同步连接双方的序列号和确认号并交换 TCP 窗口大小信息</strong>.在socket编程中，客户端执行connect()时。将触发三次握手。<br>第一次握手:客户端发送一个TCP的SYN标志位置1的包指明客户打算连接的服务器的端口，以及初始序号X,保存在包头的序列号(Sequence Number)字段里。<br>第二次握手:服务器发回确认包(ACK)应答。即SYN标志位和ACK标志位均为1同时，将确认序号(Acknowledgement Number)设置为客户的I S N加1以.即X+1。<br>第三次握手:客户端再次发送确认包(ACK) SYN标志位为0,ACK标志位为1.并且把服务器发来ACK的序号字段+1,放在确定字段中发送给对方.并且在数据段放写ISN的+1</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>D:</strong> HTTP返回码302表示永久重定向，需要重新URL（Uniform resource locator）(Wrong)<br><strong>解析：</strong><br>301，302 都是HTTP状态的编码，都代表着某个URL发生了转移，不同之处在于：<br>301 redirect: 301 代表永久性转移(Permanently Moved)。<br>302 redirect: 302 代表暂时性转移(Temporarily Moved )。 </p>
+</blockquote>
+<hr>
+<h3 id="7、Linux指令"><a href="#7、Linux指令" class="headerlink" title="7、Linux指令"></a><strong>7、Linux指令</strong></h3><h4 id="问题：下面Linux命令，不能打印该目录下所有的文件和文件夹的是？"><a href="#问题：下面Linux命令，不能打印该目录下所有的文件和文件夹的是？" class="headerlink" title="问题：下面Linux命令，不能打印该目录下所有的文件和文件夹的是？"></a><strong>问题：</strong>下面Linux命令，不能打印该目录下所有的文件和文件夹的是？</h4><h4 id="考点：操作系统（网易不限门槛的实习意思就这么明显？）"><a href="#考点：操作系统（网易不限门槛的实习意思就这么明显？）" class="headerlink" title="考点：操作系统（网易不限门槛的实习意思就这么明显？）"></a><strong>考点：</strong>操作系统（网易不限门槛的实习意思就这么明显？）</h4><h4 id="解析：-5"><a href="#解析：-5" class="headerlink" title="解析："></a><strong>解析：</strong></h4><blockquote>
+<p><strong>ls命令</strong>是Linux下最常用的命令。<strong>ls命令</strong>就是<strong>list</strong>的缩写。<br>缺省下ls用来打印当前目录的清单，如果ls指定其他目录，那么就会显式指定目录里的文件及文件夹清单，通过ls命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限等等。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>echo*:</strong> echo命令用于在shell中打印shell变量的值，或者直接输出指定的字符串。linux的echo命令，在shell编程中极为常用, 在终端下打印变量value的时候也是常常用到的，因此有必要了解下echo的用法echo命令的功能是在显示器上显示一段文字，一般起到一个提示的作用。</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20170326093150533?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="无FUCK说"></p>
+<hr>
+<blockquote>
+<p><strong>dir:</strong> dir命令是ls命令的一个别名，也是directory的缩写。通常列出的文件会以不同的颜色进行显示，不同的颜色代表不同的文件类型，下表列出了文件类型与颜色的对应关系。</p>
+</blockquote>
+<hr>
+<h2 id="三、重回战场（编程题）"><a href="#三、重回战场（编程题）" class="headerlink" title="三、重回战场（编程题）"></a><strong>三、重回战场（编程题）</strong></h2><h3 id="1、-1"><a href="#1、-1" class="headerlink" title="1、"></a><strong>1、</strong></h3><h4 id="问题："><a href="#问题：" class="headerlink" title="问题："></a><strong>问题：</strong></h4><p>小易有一个长度为n序列，小易想移除掉里面的重复元素，但是小易想是对于每种元素保留最后出现的那个。小易遇到了困难,希望你来帮助他。<br>输入描述:</p>
+<blockquote>
+<p>输入包括两行：<br>第一行为<strong>序列长度n</strong>(1 ≤ n ≤ 50)<br>第二行为n个数sequence<a href="1 ≤ sequence[i] ≤ 1000">i</a>，以空格分隔</p>
+</blockquote>
+<p>输出描述:</p>
+<blockquote>
+<p>输出消除重复元素之后的序列，以空格分隔，行末无空格</p>
+</blockquote>
+<p>输入例子:</p>
+<blockquote>
+<p>9<br>100 100 100 99 99 99 100 100 100</p>
+</blockquote>
+<p>输出例子:</p>
+<blockquote>
+<p>99 100</p>
+</blockquote>
+<h3 id="我只想说牛客网，对js一点都不！友！好！"><a href="#我只想说牛客网，对js一点都不！友！好！" class="headerlink" title="我只想说牛客网，对js一点都不！友！好！"></a>我只想说牛客网，对js一点都<strong>不！友！好！</strong></h3><h3 id="加个node-js-readline接收模块对于我这种小白简直就"><a href="#加个node-js-readline接收模块对于我这种小白简直就" class="headerlink" title="加个node.js readline接收模块对于我这种小白简直就"></a>加个node.js readline接收模块对于我这种小白简直就</h3><p><img src="http://img.blog.csdn.net/20170326113912491?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h3 id="无发渴说"><a href="#无发渴说" class="headerlink" title="无发渴说"></a>无发渴说</h3><h4 id="解析：-6"><a href="#解析：-6" class="headerlink" title="解析："></a><strong>解析：</strong></h4><p>题目还是比较简单的，题目的意思理解起来大概就是。</p>
+<ol>
+<li>你把题目给你的数据存进数组</li>
+<li>反过来将没有重复的元素放进新数组</li>
+<li>再讲最后的新数组反转输出即可</li>
+</ol>
+<p>感觉这种用flag分两段接收数据的JS接收方法真的是亮点！！</p>
+<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a><strong>代码：</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//引入node.js readline接收模块</div><div class="line">var readline = require(&apos;readline&apos;);</div><div class="line">//创建readline接口实例</div><div class="line">const rl = readline.createInterface(&#123;</div><div class="line">        input: process.stdin,</div><div class="line">        output: process.stdout</div><div class="line">&#125;);</div><div class="line"></div><div class="line">//定义需要使用的变量</div><div class="line">var sum = 0;//接收数组长度</div><div class="line">var bool = 0;//表示还未接收数据数据一，用于控制接收数据一后接收数据二</div><div class="line">var sequence = [] ;//作为数组元素</div><div class="line">var check = [] ;//作为存储满足条件的元素数组</div><div class="line"></div><div class="line">//注意给变量定义一个类型，要不然报错没商量</div><div class="line"></div><div class="line">//开始接收数据</div><div class="line">rl.on(&apos;line&apos;, function(line)&#123;</div><div class="line">    if(bool == 0)&#123;//接受数据一</div><div class="line">        sum = parseInt(line.trim());</div><div class="line">        bool = 1;</div><div class="line">    &#125;else&#123;//接收数据2</div><div class="line">        sequence = line.split(&quot; &quot;).map(function(index)&#123;</div><div class="line">           return parseInt(index); </div><div class="line">        &#125;);//以空格为单位接收数据进数组</div><div class="line">        </div><div class="line">        sequence.reverse();//反转数组，舒服</div><div class="line">        </div><div class="line">        for(var i = 0;i&lt;sum;i++)&#123;//从后往前加入新元素</div><div class="line">  		if(check.indexOf(sequence[i]) == -1)</div><div class="line">    		check.push(sequence[i]);</div><div class="line">		&#125;</div><div class="line">        check.reverse();//反转2333</div><div class="line">        console.log(check.join(&quot; &quot;));//连接成字符串</div><div class="line">        bool = 2;//表示接收了第二行数据，方便进行下一次循环检测</div><div class="line">    &#125;</div><div class="line">    if(bool == 2)//对bool进行初始化，当成flag用</div><div class="line">        bool = 0;</div><div class="line">    </div><div class="line">   </div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="2、-1"><a href="#2、-1" class="headerlink" title="2、"></a><strong>2、</strong></h3><h4 id="问题：-1"><a href="#问题：-1" class="headerlink" title="问题："></a><strong>问题：</strong></h4><p>常规的表达式求值，我们都会根据计算的优先级来计算。比如<em>/的优先级就高于+-。但是小易所生活的世界的表达式规则很简单，从左往右依次计算即可，而且小易所在的世界没有除法，意味着表达式中没有/，只有(+, - 和 </em>)。现在给出一个表达式，需要你帮忙计算出小易所在的世界这个表达式的值为多少<br>输入描述:</p>
+<blockquote>
+<p>输入为一行字符串，即一个表达式。其中运算符只有-,+,*。参与计算的数字只有0~9.<br>保证表达式都是合法的，排列规则如样例所示。</p>
+</blockquote>
+<p>输出描述:</p>
+<blockquote>
+<p>输出一个数，即表达式的值</p>
+</blockquote>
+<p>输入例子:</p>
+<blockquote>
+<p>3+5*7</p>
+</blockquote>
+<p>输出例子:</p>
+<blockquote>
+<p>56</p>
+</blockquote>
+<h4 id="解析：-7"><a href="#解析：-7" class="headerlink" title="解析："></a><strong>解析：</strong></h4><h3 id="一个半小时才做完这个题，我跟你说我就是这-表-情"><a href="#一个半小时才做完这个题，我跟你说我就是这-表-情" class="headerlink" title="一个半小时才做完这个题，我跟你说我就是这!表!情!"></a>一个半小时才做完这个题，我跟你说我<strong>就是这!表!情!</strong></h3><p><img src="http://img.blog.csdn.net/20170326164729681?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VpeGluXzMxMzQ3ODMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<ol>
+<li>五分钟理清思路，10分钟编程，一个小时找错误（<strong>编程五分钟，Debug2小时</strong>）</li>
+<li>题目的意思很简单，将数据分成两个数组进行运算即可，用正则表达式，则更为方便，但是不熟练，我还是选择放弃用这个方法</li>
+<li>血泪教训：一定要严格化输出输入数据的格式和精度（parseInt and parseFloat是好朋友），否则可能就是在研究0+2为什么等于02的路上越走越远 <h4 id="代码：-1"><a href="#代码：-1" class="headerlink" title="代码："></a><strong>代码：</strong></h4></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">var readline = require(&quot;readline&quot;);</div><div class="line">const r1 = readline.createInterface(&#123;</div><div class="line">    input:process.stdin,</div><div class="line">    output:process.stdout</div><div class="line">&#125;);</div><div class="line">//定义需要使用的变量</div><div class="line">var number = [];//数字数组</div><div class="line">var symbol = [];//符号数组</div><div class="line">var input = [];//输入数据</div><div class="line">var a = 0;//存储计算结果的变量</div><div class="line"></div><div class="line"></div><div class="line">//计算子函数</div><div class="line">function operate(numa,sym,numb)&#123;//不要忘记括号！！</div><div class="line">    switch (sym)&#123;</div><div class="line">        case &apos;+&apos;: return parseFloat(numa) + parseFloat(numb);</div><div class="line">        case &apos;-&apos;: return parseFloat(numa) - parseFloat(numb);</div><div class="line">        case &apos;*&apos;: return parseFloat(numa) * parseFloat(numb);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">r1.on(&apos;line&apos;,function(line)&#123;</div><div class="line">    //接收所有输入数据</div><div class="line">    input = line.split(&quot;&quot;);</div><div class="line">    </div><div class="line">    //按照顺序分割成数字和符号数组</div><div class="line">    for(var i = 0; i &lt; input.length;i++)&#123;//var not int </div><div class="line">        if(i % 2 == 0)</div><div class="line">            number.push(input[i]);</div><div class="line">        else</div><div class="line">            symbol.push(input[i]);</div><div class="line">    &#125;</div><div class="line">             </div><div class="line">    //将存储变量赋初值，为了方便后面的循环复制存储</div><div class="line">    a = number[0];            </div><div class="line">    for(var j = 1;j &lt; symbol.length + 1;j++)&#123;</div><div class="line">        a = operate(a,symbol[j-1],number[j]);</div><div class="line">    &#125;</div><div class="line">    console.log(a);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="3、"><a href="#3、" class="headerlink" title="3、"></a><strong>3、</strong></h3><h4 id="问题：-2"><a href="#问题：-2" class="headerlink" title="问题："></a><strong>问题：</strong></h4><p>小易最近在数学课上学习到了集合的概念,集合有三个特征：1.确定性 2.互异性 3.无序性.<br>小易的老师给了小易这样一个集合：<br>S = { p/q | w ≤ p ≤ x, y ≤ q ≤ z }<br>需要根据给定的w，x，y，z,求出集合中一共有多少个元素。小易才学习了集合还解决不了这个复杂的问题,需要你来帮助他。<br>输入描述:</p>
+<blockquote>
+<p>输入包括一行：<br>一共4个整数分别是w(1 ≤ w ≤ x)，x(1 ≤ x ≤ 100)，y(1 ≤ y ≤ z)，z(1 ≤ z ≤ 100).以空格分隔</p>
+</blockquote>
+<p>输出描述:</p>
+<blockquote>
+<p>输出集合中元素的个数</p>
+</blockquote>
+<p>输入例子:</p>
+<blockquote>
+<p>1 10 1 1</p>
+</blockquote>
+<p>输出例子:</p>
+<blockquote>
+<p>10</p>
+</blockquote>
+<h4 id="解析：-8"><a href="#解析：-8" class="headerlink" title="解析："></a><strong>解析：</strong></h4><p>因为这个是第一题编程题，还是比较简单的，当时JS不会写，就用Java写的，所见难度并不是很大，大家可以参考下代码就行啦</p>
+<h4 id="代码：-2"><a href="#代码：-2" class="headerlink" title="代码："></a><strong>代码：</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">var readline = require(&quot;readline&quot;);</div><div class="line">const r1 = readline.createInterface(&#123;</div><div class="line">    input:process.stdin,</div><div class="line">    output:process.stdout</div><div class="line">&#125;);</div><div class="line"></div><div class="line">var a = 0;</div><div class="line">var c = [];</div><div class="line">var b = [];</div><div class="line"></div><div class="line">r1.on(&apos;line&apos;,function(line)&#123;</div><div class="line">    c = line.split(&quot; &quot;).map(function(index)&#123;</div><div class="line">        return parseInt(index);</div><div class="line">    &#125;)</div><div class="line">    for(var i = c[0];i &lt; c[1] + 1;i++)</div><div class="line">    	for(var j = c[2];j &lt; c[3] + 1;j++)&#123;</div><div class="line">            a = i / j;</div><div class="line">            if(b.indexOf(a) == -1)</div><div class="line">        		b.push(a);</div><div class="line">    &#125;</div><div class="line">    console.log(b.length);    </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="三、重回战场（问答题）"><a href="#三、重回战场（问答题）" class="headerlink" title="三、重回战场（问答题）"></a><strong>三、重回战场（问答题）</strong></h2><h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a><strong>题目：</strong></h3><p>在页面上有如下表格，当点击成绩的时候，所有行数据根据成绩从低到高排序，再点击成绩则变为从高到低排序，请用JavaScript实现以上功能，可以使用jQuery<br>名字     | 性别  | 成绩<br>——– | —  | —<br>张三 | 男|77<br>李四  | 女|87<br>王五    | 未知（这个6）|50</p>
+<h4 id="解析：-9"><a href="#解析：-9" class="headerlink" title="解析："></a><strong>解析：</strong></h4><p>这个坑先留着，等到实力够了再来补上</p>
+<hr>
+<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a><strong>四、总结</strong></h2><h4 id="经过这么一天半的折腾感觉自己还是学到了不少知识，在之后的学习路径规划上："><a href="#经过这么一天半的折腾感觉自己还是学到了不少知识，在之后的学习路径规划上：" class="headerlink" title="经过这么一天半的折腾感觉自己还是学到了不少知识，在之后的学习路径规划上："></a>经过这么一天半的折腾感觉自己还是学到了不少知识，在之后的学习路径规划上：</h4><h4 id="首先要注意对大三相关专业课的学习的记忆，也要有随时随地用到数据结构和数据库的觉悟，虽然猪场说的是无门槛投简历，大范围的传播内推码，但是从这次笔试的题目内容可以看出猪场的套路还是不少，像选择题虽然占分不高，但是非科班出身的面试者可能并没有那么多的计算机方面的储备知识，从而科班和非科班出身的差距就会在笔试成绩上体现出来。"><a href="#首先要注意对大三相关专业课的学习的记忆，也要有随时随地用到数据结构和数据库的觉悟，虽然猪场说的是无门槛投简历，大范围的传播内推码，但是从这次笔试的题目内容可以看出猪场的套路还是不少，像选择题虽然占分不高，但是非科班出身的面试者可能并没有那么多的计算机方面的储备知识，从而科班和非科班出身的差距就会在笔试成绩上体现出来。" class="headerlink" title="首先要注意对大三相关专业课的学习的记忆，也要有随时随地用到数据结构和数据库的觉悟，虽然猪场说的是无门槛投简历，大范围的传播内推码，但是从这次笔试的题目内容可以看出猪场的套路还是不少，像选择题虽然占分不高，但是非科班出身的面试者可能并没有那么多的计算机方面的储备知识，从而科班和非科班出身的差距就会在笔试成绩上体现出来。"></a>首先要注意对大三相关专业课的学习的记忆，也要有随时随地用到数据结构和数据库的觉悟，虽然猪场说的是无门槛投简历，大范围的传播内推码，但是从这次笔试的题目内容可以看出猪场的套路还是不少，像选择题虽然占分不高，但是非科班出身的面试者可能并没有那么多的计算机方面的储备知识，从而科班和非科班出身的差距就会在笔试成绩上体现出来。</h4><h4 id="其次是对js编程中例如jQuery等能够提升编程效率的重视和掌握，在看jQuery的过程中一直没有动力，看看最后的问答题，无从下手的感觉可能会给自己点压力吧嘿嘿"><a href="#其次是对js编程中例如jQuery等能够提升编程效率的重视和掌握，在看jQuery的过程中一直没有动力，看看最后的问答题，无从下手的感觉可能会给自己点压力吧嘿嘿" class="headerlink" title="其次是对js编程中例如jQuery等能够提升编程效率的重视和掌握，在看jQuery的过程中一直没有动力，看看最后的问答题，无从下手的感觉可能会给自己点压力吧嘿嘿"></a>其次是对js编程中例如jQuery等能够提升编程效率的重视和掌握，在看jQuery的过程中一直没有动力，看看最后的问答题，无从下手的感觉可能会给自己点压力吧嘿嘿</h4><h4 id="最后是对算法能力的要求跟想象中的差距不大，刚刚好在努把力就能懂的边边上，感觉自己还是需要不断的学习，跟前端群友讨论的过程中，都表示目前还只是大二，学习时间还很充足，但是，时间-这个东西，说慢也慢说快也快，马上就是个大三狗了，还是要给自己定个小目标，比如明年进猪场实习？"><a href="#最后是对算法能力的要求跟想象中的差距不大，刚刚好在努把力就能懂的边边上，感觉自己还是需要不断的学习，跟前端群友讨论的过程中，都表示目前还只是大二，学习时间还很充足，但是，时间-这个东西，说慢也慢说快也快，马上就是个大三狗了，还是要给自己定个小目标，比如明年进猪场实习？" class="headerlink" title="最后是对算法能力的要求跟想象中的差距不大，刚刚好在努把力就能懂的边边上，感觉自己还是需要不断的学习，跟前端群友讨论的过程中，都表示目前还只是大二，学习时间还很充足，但是，时间 这个东西，说慢也慢说快也快，马上就是个大三狗了，还是要给自己定个小目标，比如明年进猪场实习？"></a>最后是对算法能力的要求跟想象中的差距不大，刚刚好在努把力就能懂的边边上，感觉自己还是需要不断的学习，跟前端群友讨论的过程中，都表示目前还只是大二，学习时间还很充足，但是，时间 这个东西，说慢也慢说快也快，马上就是个大三狗了，还是要给自己定个小目标，比如明年进猪场实习？</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.peterchen.com/2017/08/27/test2017/" data-id="cj743e86600022wtcwfhewzl6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/栈/">栈</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/09/03/text2018/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2018网易校招前端开发工程师笔试卷讨论
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/27/Hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">搭建免费博客Hexo并部署到Github和Coding Pages</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blogs/">Blogs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔试/">笔试</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/操作系统/">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构（链表，栈，二叉树）/">数据结构（链表，栈，二叉树）</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/栈/">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/正则表达式/">正则表达式</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/排序算法/" style="font-size: 10px;">排序算法</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据结构（链表，栈，二叉树）/" style="font-size: 10px;">数据结构（链表，栈，二叉树）</a> <a href="/tags/栈/" style="font-size: 10px;">栈</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/09/03/text2018/">2018网易校招前端开发工程师笔试卷讨论</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/27/test2017/">2017网易实习前端面试题讨论</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/27/Hexo/">搭建免费博客Hexo并部署到Github和Coding Pages</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/26/Hello-World/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Peter Chen<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
